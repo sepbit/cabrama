@@ -54,16 +54,16 @@ def cotacao():
     file = csv.reader(response, delimiter=';')
     for row in file :
         if row[3] == 'USD':
-            message += '\n#Dolar R$:' + mask_money(row[4])
+            message += '\n#Dolar R$:' + mask_money(row[5])
 
         if row[3] == 'EUR':
-            message += '\n#Euro R$:' + mask_money(row[4])
+            message += '\n#Euro R$:' + mask_money(row[5])
 
         if row[3] == 'GBP':
-            message += '\n#LibraEsterlina R$:' + mask_money(row[4])
+            message += '\n#LibraEsterlina R$:' + mask_money(row[5])
 
         if row[3] == 'XAU':
-            message += '\n#Ouro R$:' + mask_money(row[4])
+            message += '\n#Ouro R$:' + mask_money(row[5])
 
     message += '\n\n#bot #cambio #PTAX #BCB #Brasil'
     return message
