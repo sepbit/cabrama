@@ -67,6 +67,3 @@ def cotacao():
 
     message += '\n\n#bot #cambio #PTAX #BCB #Brasil'
     return message
-
-
-print(cotacao())
