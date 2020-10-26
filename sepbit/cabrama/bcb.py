@@ -38,7 +38,7 @@ def cotacao():
     timestamp = datetime.datetime.now()
 
     request = Request(
-        'https://www4.bcb.gov.br/Download/fechamento/' + timestamp.strftime('%Y%m%d') + '.csv'
+        'https://www4.bcb.gov.br/Download/fechamento/' + timestamp.strftime('%Y%m%d') + '.csv',
         headers={
             'User-Agent': 'Mozilla/5.0'
         }
