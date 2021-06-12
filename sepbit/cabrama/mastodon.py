@@ -1,5 +1,5 @@
 '''
-Cabrama - Câmbio no Brasil para Mastodon
+Mastodon.py Simple statuses Mastodon
 Copyright (C) 2020 Vitor Guia
 
 This program is free software: you can redistribute it and/or modify
