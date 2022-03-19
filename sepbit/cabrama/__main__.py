@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 '''
 Cabrama - Câmbio no Brasil para Mastodon
-Copyright (C) 2020 Vitor Guia
+Copyright (C) 2020-2022 Vitor Guia
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,23 +20,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import time
 from os import environ
-from sepbit.cabrama.mastodon import statuses
 from sepbit.cabrama.bcb import cotacao
+from sepbit.sistamapy.statuses import Statuses
 
 
 def main():
     '''
     Entry point
     '''
-    statuses(
+    toot = Statuses(
         environ['INSTANCE'],
         environ['TOKEN'],
-        data = {
-            'status': cotacao(),
-            'language': 'por',
-            'visibility': 'public'
-        }
     )
+
+    toot.post({
+        'status': cotacao(),
+        'language': 'por',
+        'visibility': 'public'
+    })
 
 
 if __name__ == '__main__':
